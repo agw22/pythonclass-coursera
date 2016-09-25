@@ -16,7 +16,7 @@ print 'Retrieved',len(data),'characters'
 try: js = json.loads(str(data))
 except: js = None
 if 'status' not in js or js['status'] != 'OK':
-    print '==== Failure To Retrieve ===='
+    print '==== Failured To Retrieve ===='
     print data
 
 print json.dumps(js, indent=4)
@@ -28,4 +28,3 @@ print 'lat',lat,'lng',lng
 location = js['results'][0]['formatted_address']
 print location
 print placeid
-
